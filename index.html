@@ -5,66 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>nslcoder</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container">
+
       <header>
-        <h1 class="logo">nslcoder</h1>
-        <ul class="exlink">
-          <li>
-            <a href="https://github.com/nslcoder" target="_blank">Github</a>
-          </li>
-          <li>
-            <a href="https://codepen.io/nslcoder" target="_blank">CodePen</a>
-          </li>
-        </ul>
+        <div class="switch-box">
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="logo">
+          nslcoder
+        </div>
+        <nav>
+          <a href="https://github.com/nslcoder" target="_blank" title="Github"><img src="icons/github.svg" alt="Github Logo" class="icon"></a>
+          <a href="https://codepen.io/nslcoder" target="_blank" title="CodePen"><img src="icons/codepen.svg" alt="CodePen Logo" class="icon"></a>
+        </nav>
       </header>
 
       <main>
-        <div class="intro">
-          <p>
-            I'm learning web development on my own from the free materials found
-            on the Internet. No mentor or a fancy computer set up. Just me and a
-            simple laptop. Currently based in Kathmandu. In the long run, I want
-            to be able to create and run an entire website and an entire app
-            alone.
+          <p class="intro">
+            I'm learning web development on my own from the free materials found on the Internet. No mentor or a fancy computer set up. Just me and a simple laptop. Currently based in Kathmandu. In the long run, I want to be able to create and run an entire website and an app alone. 
           </p>
-        </div>
+
+          <p class="workstatus">
+            I'm available for entry-level tasks.
+          </p>
+
         <div class="skills">
-          <h2>What I know so far:</h2>
-          <ul>
-            <li>Hyper Text Markup Language (HTML)</li>
-            <li>Cascading Style Sheets (CSS)</li>
+          <h2>What I Know So Far:</h2>
+          <ol>
+            <li>HTML</li>
+            <li>CSS</li>
             <li>Markdown</li>
             <li>Git</li>
-            <li>Vanilla JavaScript (Basics)</li>
-          </ul>
-        </div>
-        <div class="learner">
-          <h2>What I'm learning:</h2>
-          <ul>
             <li>JavaScript</li>
-            <li>Structured Query Language (SQL)</li>
+            <li>SQL (Basics)</li>
+          </ol>
+        </div>
+
+        <div class="learnings">
+          <h2>What I'm Learning:</h2>
+          <ol>
+            <li>JavaScript (Node & Express)</li>
+            <li>MongoDB</li>
             <li>PowerShell</li>
-          </ul>
+          </ol>
         </div>
-        <div class="projects">
-          <h2>My projects:</h2>
-          <ul>
-            <li>Watch this space</li>
-            <li>Watch this space</li>
-            <li>Watch this space</li>
-          </ul>
-        </div>
+
         <div class="blog">
-          <h2>My learning blog:</h2>
-          <ul>
-            <li>
-              <a href="https://nslpad.netlify.app/" target="_blank">nslpad</a>
-            </li>
-          </ul>
+          <h2>My Learning Blog:</h2>
+              <a href="https://nslpad.netlify.app/" target="_blank" class="blog-link">nslpad</a>
         </div>
+
+        <div class="projects">
+          <h2>My Projects:</h2>
+
+          <div class="projects-container">
+            <a href="https://nslcoder.github.io/binarytodecimalconverter/" target="_blank" rel="noopener">
+              <div class="project">
+                <h3>Simple Binary to Decimal Converter</h3>
+                <span class="date">Jun 19, 2020</span>
+                <p class="project-description">A simple converter that takes binary number as input and produces decimal number.</p>
+                <ul class="project-tech">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+            </a>
+
+            <a href="#" target="_blank" rel="noopener">
+              <div class="project">
+                <h3>Title that spans two lines, no more, no less</h3>
+                <span class="date">Apr 12, 2020</span>
+                <p class="project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptate nisi. Veniam.</p>
+                <ul class="project-tech">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+
+        </div>
+        
       </main>
-    </div>
+
+      <footer>
+        <button><a href="mailto:hello@nslcoder.com">Get in touch!</a></button>
+        <p class="creator">Made with dedication by nslcoder (Lokesh Gurung).</p>
+        <p class="copyright">Copyright &#169; 2020 nslcoder. All rights reserved.</p>
+      </footer>
+
   </body>
 </html>
