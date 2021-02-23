@@ -14,8 +14,8 @@ body {
 header,
 main,
 footer {
-  border: 1px solid #252525;
-  border-radius: 5px;
+  /* border: 1px solid #252525;
+  border-radius: 5px; */
   width: 90vw;
   margin: 10px auto;
   padding: 10px;
