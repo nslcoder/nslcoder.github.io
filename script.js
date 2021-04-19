@@ -1,14 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
+const modeBtn = document.querySelector("input");
+const bd = document.body;
+const all = document.querySelectorAll("*");
+const githubIcon = document.querySelector(".github-icon");
+const codepenIcon = document.querySelector(".codepen-icon");
+const shadowAll = document.querySelectorAll(".shadow-onoff");
 
-    const modeStyles = document.getElementById('mode');
-    const switchMode = document.querySelector("input");
+modeBtn.addEventListener("click", () => {
+    bd.classList.toggle("bg-color");
 
-    switchMode.addEventListener('click', () => {
-        if(modeStyles.href.includes('light')){
-            modeStyles.href = 'dark-styles.css';
-        } else {
-            modeStyles.href = 'light-styles.css';
-
-        }
+    all.forEach(item => {
+        item.classList.toggle("text-color");
     })
-});
+
+    githubIcon.classList.toggle("github-color");
+    codepenIcon.classList.toggle("codepen-color");
+
+    shadowAll.forEach(item => {
+        item.classList.toggle("shadow-mode");
+    })
+})
