@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Cardo", serif;
   font-size: 17px;
   min-height: 100vh;
   color: #252525;
@@ -15,7 +17,7 @@ header,
 main,
 footer {
   /* border: 1px solid #252525;
-  border-radius: 5px; */
+    border-radius: 5px; */
   width: 90vw;
   margin: 10px auto;
   padding: 10px;
@@ -39,9 +41,9 @@ header {
 
 /* Header: Dark/Light Mode */
 /* .switch-box {
-  visibility: visible;
-}
- */
+    visibility: visible;
+  }
+   */
 .switch {
   position: relative;
   display: inline-block;
@@ -103,17 +105,17 @@ nav {
 
 /* Main Element */
 .intro {
-  font-size: 20px;
-  margin: 25px 0;
+  font-size: 25px;
+  margin: 45px 0;
 }
 
 .workstatus {
   background-color: rgb(41, 233, 83, 0.8);
   border-radius: 5px;
   font-size: 20px;
-  margin: 25px auto;
+  margin: 45px auto;
   padding: 10px;
-  width: 90%;
+  width: 70%;
   color: #252525;
   text-align: center;
   box-shadow: 4px 6px 10px -1px #e0dede;
@@ -129,7 +131,7 @@ nav {
 .learnings,
 .blog,
 .projects {
-  margin: 25px 0;
+  margin: 45px 0;
 }
 
 .blog-link {
@@ -143,18 +145,21 @@ nav {
 .projects-container {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr;
-  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
 }
 
 .project {
   border: 1px solid rgb(41, 233, 83);
   border-radius: 5px;
   padding: 20px;
-  height: 231px;
   cursor: pointer;
   box-shadow: 3px 3px 5px -1px #e0dede, -3px -3px 5px -1px #e0dede;
+  color: #252525;
+}
+
+.project h3,
+p {
   color: #252525;
 }
 
@@ -211,38 +216,42 @@ button:hover {
   background-color: rgb(41, 233, 83);
 }
 
-.creator,
+.creator {
+  text-align: center;
+  margin-top: 30px;
+}
+
 .copyright {
   text-align: center;
   margin-top: 10px;
 }
 
-@media screen and (min-width: 945px) {
+@media screen and (min-width: 900px) {
   header,
   main,
   footer {
-    width: 50vw;
+    width: 75vw;
     padding: 20px;
   }
 
   .intro {
     font-size: 30px;
   }
+}
 
-  .projects-container {
-    margin-top: 10px;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 15px;
-  }
+.bg-color {
+  background-color: #252525;
+}
 
-  .project {
-    border: 1px solid rgb(41, 233, 83);
-    border-radius: 5px;
-    padding: 20px;
-    cursor: pointer;
-    box-shadow: 3px 3px 5px -1px #e0dede, -3px -3px 5px -1px #e0dede;
-    color: #252525;
-  }
+.text-color {
+  color: #fff;
+}
+
+.github-color,
+.codepen-color {
+  fill: #fff;
+}
+
+.shadow-mode {
+  box-shadow: none;
 }
