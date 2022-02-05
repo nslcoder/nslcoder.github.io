@@ -5,12 +5,18 @@ const githubIcon = document.querySelector('.github-icon');
 const codepenIcon = document.querySelector('.codepen-icon');
 const shadowAll = document.querySelectorAll('.shadow-onoff');
 const year = document.querySelector('.year');
+const projectTitles = document.querySelectorAll('.project-title');
 
 modeBtn.addEventListener('click', () => {
   bd.classList.toggle('bg-color');
 
   all.forEach((item) => {
     item.classList.toggle('text-color');
+  });
+
+  projectTitles.forEach((title) => {
+    console.log(title);
+    title.classList.toggle('text-color');
   });
 
   githubIcon.classList.toggle('github-color');

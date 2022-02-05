@@ -4,13 +4,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: #252525;
 }
 
 body {
   font-family: 'Cardo', serif;
   font-size: 17px;
   min-height: 100vh;
-  color: #252525;
 }
 
 header,
@@ -153,12 +153,6 @@ nav {
   padding: 20px;
   cursor: pointer;
   box-shadow: 3px 3px 5px -1px #e0dede, -3px -3px 5px -1px #e0dede;
-  color: #252525;
-}
-
-.project h3,
-p {
-  color: #252525;
 }
 
 .project:hover {
