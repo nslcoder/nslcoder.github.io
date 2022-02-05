@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Cardo", serif;
+  font-family: 'Cardo', serif;
   font-size: 17px;
   min-height: 100vh;
   color: #252525;
@@ -16,15 +16,9 @@ body {
 header,
 main,
 footer {
-  /* border: 1px solid #252525;
-    border-radius: 5px; */
   width: 90vw;
   margin: 10px auto;
   padding: 10px;
-}
-
-ol {
-  margin-left: 18px;
 }
 
 a {
@@ -40,10 +34,6 @@ header {
 }
 
 /* Header: Dark/Light Mode */
-/* .switch-box {
-    visibility: visible;
-  }
-   */
 .switch {
   position: relative;
   display: inline-block;
@@ -71,7 +61,7 @@ header {
 
 .slider::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 18px;
   width: 18px;
   left: 3px;
@@ -132,6 +122,14 @@ nav {
 .blog,
 .projects {
   margin: 45px 0;
+}
+
+.skill-list {
+  line-height: 2;
+}
+
+.skill-list > h3 {
+  display: inline;
 }
 
 .blog-link {
