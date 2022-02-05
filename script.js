@@ -1,21 +1,26 @@
-const modeBtn = document.querySelector("input");
+const modeBtn = document.querySelector('input');
 const bd = document.body;
-const all = document.querySelectorAll("*");
-const githubIcon = document.querySelector(".github-icon");
-const codepenIcon = document.querySelector(".codepen-icon");
-const shadowAll = document.querySelectorAll(".shadow-onoff");
+const all = document.querySelectorAll('*');
+const githubIcon = document.querySelector('.github-icon');
+const codepenIcon = document.querySelector('.codepen-icon');
+const shadowAll = document.querySelectorAll('.shadow-onoff');
+const year = document.querySelector('.year');
 
-modeBtn.addEventListener("click", () => {
-    bd.classList.toggle("bg-color");
+modeBtn.addEventListener('click', () => {
+  bd.classList.toggle('bg-color');
 
-    all.forEach(item => {
-        item.classList.toggle("text-color");
-    })
+  all.forEach((item) => {
+    item.classList.toggle('text-color');
+  });
 
-    githubIcon.classList.toggle("github-color");
-    codepenIcon.classList.toggle("codepen-color");
+  githubIcon.classList.toggle('github-color');
+  codepenIcon.classList.toggle('codepen-color');
 
-    shadowAll.forEach(item => {
-        item.classList.toggle("shadow-mode");
-    })
-})
+  shadowAll.forEach((item) => {
+    item.classList.toggle('shadow-mode');
+  });
+});
+
+// Get the current year and send it to HTML
+const date = new Date();
+year.textContent = date.getFullYear();
