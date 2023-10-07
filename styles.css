@@ -1,22 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-black: rgb(1, 4, 12);
+  --color-white: rgb(255, 255, 255);
+  --color-grey-1: rgb(102, 102, 102);
+  --color-grey-2: rgb(100, 116, 139);
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #252525;
+  color: var(--color-black);
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  font-family: 'Cardo', serif;
-  font-size: 17px;
   min-height: 100vh;
 }
 
 header,
 main,
 footer {
-  width: 90vw;
+  max-width: 750px;
   margin: 10px auto;
   padding: 10px;
 }
@@ -25,59 +32,16 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-size: 18px;
+}
+
 /* Header */
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-/* Header: Dark/Light Mode */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 24px;
-}
-
-.switch input {
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 24px;
-  background-color: #252525;
-  transition: 0.4s;
-}
-
-.slider::before {
-  position: absolute;
-  content: '';
-  height: 18px;
-  width: 18px;
-  left: 3px;
-  bottom: 3px;
-  border-radius: 50%;
-  background-color: #fff;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #fff;
-}
-
-input:checked + .slider::before {
-  transform: translateX(16px);
-  background-color: #252525;
 }
 
 nav {
@@ -95,26 +59,8 @@ nav {
 
 /* Main Element */
 .intro {
-  font-size: 25px;
+  font-size: 16px;
   margin: 45px 0;
-}
-
-.workstatus {
-  background-color: rgb(41, 233, 83, 0.8);
-  border-radius: 5px;
-  font-size: 20px;
-  margin: 45px auto;
-  padding: 10px;
-  width: 70%;
-  color: #252525;
-  text-align: center;
-  box-shadow: 4px 6px 10px -1px #e0dede;
-  transition: 0.4s;
-}
-
-.workstatus:hover {
-  transform: translateY(-2px);
-  background-color: rgb(41, 233, 83);
 }
 
 .skills,
@@ -133,10 +79,7 @@ nav {
 }
 
 .blog-link {
-  display: block;
-  font-size: 20px;
   text-decoration: underline;
-  color: rgb(41, 233, 83);
 }
 
 /* Projects */
@@ -144,40 +87,54 @@ nav {
   margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 1.2rem;
 }
 
 .project {
-  border: 1px solid rgb(41, 233, 83);
-  border-radius: 5px;
-  padding: 20px;
+  border: 1px solid #64748b;
+  border-radius: 12px;
+  padding: 40px 20px 30px 20px;
   cursor: pointer;
-  box-shadow: 3px 3px 5px -1px #e0dede, -3px -3px 5px -1px #e0dede;
+  transition: all 0.25s;
+  color: var(--color-white);
+}
+
+.project > a > h3 {
+  font-size: 18px;
 }
 
 .project:hover {
-  box-shadow: 3px 3px 1px -1px rgb(41, 233, 83),
-    -3px -3px 1px -1px rgb(41, 233, 83);
+  background-color: var(--color-black);
+  border-color: var(--color-black);
+}
+
+.project:hover > a > h3,
+.project:hover .project-description {
+  color: var(--color-white);
 }
 
 .date {
   display: inline-block;
   font-size: 12px;
-  color: #616161;
+  color: var(--color-grey-2);
   margin: 10px 0;
+}
+
+.project-description {
+  margin-top: 20px;
 }
 
 .project-tech {
   display: flex;
   list-style: none;
   margin-top: 10px;
-  color: #616161;
 }
 
 .project-tech li {
   display: inline-block;
   margin-right: 15px;
   font-size: 14px;
+  color: var(--color-grey-2);
 }
 
 /* Footer */
@@ -186,26 +143,23 @@ footer {
 }
 
 button {
-  background-color: rgb(41, 233, 83, 0.8);
+  background-color: var(--color-black);
   border-radius: 5px;
   border: none;
-  font-size: 20px;
+  color: var(--color-black);
+  font-size: 16px;
   margin: 0 auto;
-  padding: 10px;
-  width: 150px;
-  text-align: center;
+  padding: 10px 20px;
   cursor: pointer;
-  box-shadow: 4px 6px 10px -1px #e0dede;
-  transition: 0.4s;
+  transition: all 0.25s;
 }
 
 button a {
-  color: #252525;
+  color: var(--color-white);
 }
 
 button:hover {
-  transform: translateY(-2px);
-  background-color: rgb(41, 233, 83);
+  transform: scale(1.1);
 }
 
 .creator {
@@ -216,34 +170,4 @@ button:hover {
 .copyright {
   text-align: center;
   margin-top: 10px;
-}
-
-@media screen and (min-width: 900px) {
-  header,
-  main,
-  footer {
-    width: 75vw;
-    padding: 20px;
-  }
-
-  .intro {
-    font-size: 30px;
-  }
-}
-
-.bg-color {
-  background-color: #252525;
-}
-
-.text-color {
-  color: #fff;
-}
-
-.github-color,
-.codepen-color {
-  fill: #fff;
-}
-
-.shadow-mode {
-  box-shadow: none;
 }
