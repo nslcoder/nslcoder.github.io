@@ -188,6 +188,7 @@ footer {
 .footer-links {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .footer-link {
@@ -197,22 +198,6 @@ footer {
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
-}
-
-@media screen and (min-width: 576px) {
-  .footer-links {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-.status-dot {
-  display: inline-block;
-  background-color: rgb(var(--color-green));
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  margin-right: 8px;
 }
 
 .creator {
